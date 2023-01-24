@@ -20,6 +20,10 @@ mongoose.connection.on("connected",()=>{
     console.log("mongo db connect success");
 })
 
+app.get("",(req,res)=>{
+    res.sendFile(__dirname+"/index.html");
+})
+
 app.listen(4000,()=>{
     console.log("server is starting at port no 4000 node js");
 });
