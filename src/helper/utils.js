@@ -23,12 +23,13 @@ const isAuthenticated=async(req,res,next)=>{
             }
 
             req.body.user_id=verify._id;
-             return res.status(200).json({
-                message:"authenticated",
-                next:next()
-            })
+            //   res.status(200).json({
+            //     message:"authenticated",
+                
+            // })
+            return next();
         }
-        return res.status(422).json({
+        else return res.status(422).json({
             message:"user details are not verified"
         });
     } catch (error) {

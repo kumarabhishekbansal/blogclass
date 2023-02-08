@@ -4,6 +4,7 @@ const cors=require("cors");
 const bodyparser=require("body-parser");
 const {authrouter}=require("./src/auth/router");
 const {blogrouter}=require("./src/blog/router");
+const {commentrouter}=require("./src/comment/router");
 const app=express();
 
 
@@ -13,6 +14,7 @@ app.use(cors());
 app.use(bodyparser.json());
 app.use("/auth",authrouter);
 app.use("/blog",blogrouter);
+app.use("/comment",commentrouter);
 // connection with mongo db
 
 mongoose.connect("mongodb+srv://Abhishek:foG2pCKaFlF0yShL@cluster0.76z2f9m.mongodb.net/blogclass?retryWrites=true&w=majority");
