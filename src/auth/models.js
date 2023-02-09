@@ -17,7 +17,8 @@ const userschema=new mongoose.Schema({
             type:String
         },
         email:{
-            type:String
+            type:String,
+            unique:true,
         },
 },{
     timestamps:true

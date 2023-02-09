@@ -3,7 +3,10 @@ const { User } = require("./models");
 const jwt = require("jsonwebtoken");
 var validator = require("validator");
 const SECRET_KEY = "JAISHREERAMJIJAIMATADI";
-// password length check
+
+
+
+// password validation
 
 const checkPass = (password) => {
   var special = false;
@@ -118,11 +121,18 @@ const checkPass = (password) => {
   return true;
 };
 
+
+
+// to check email validation
+
+
 const checkemail = (email) => {
   var pattern = /^[A-Za-z0-9_.]{3,}@[A-Za-z]{3,}[.]{1}[A-za-z.]{2,6}$/;
   if (pattern.test(email)) return true;
   return false;
 };
+
+// user registration
 
 const register = async (req, res) => {
   try {
@@ -182,6 +192,10 @@ const register = async (req, res) => {
   }
 };
 
+
+// common login as we require this function many time like for generate token or reset password or anything else
+
+
 const commonlogin = async (req, res, next) => {
   try {
     const { email, password } = req.body;
@@ -221,6 +235,9 @@ const commonlogin = async (req, res, next) => {
   }
 };
 
+
+// login to generate token and from this token we can perform crud operation in both blogs and comment
+
 const login = async (req, res) => {
   try {
     return res.status(200).json({
@@ -232,6 +249,10 @@ const login = async (req, res) => {
     console.log("error in login");
   }
 };
+
+
+// password reset after login (common login)
+
 
 const reset = async (req, res) => {
   try {

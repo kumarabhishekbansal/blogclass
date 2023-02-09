@@ -1,0 +1,202 @@
+register user
+
+
+{
+    "username":"a1",
+    "name":"abhishek",
+    "password":"RamjiHanumanji@1234",
+    "email":"abc@gmail.com"
+}
+
+{
+    "username":"a2",
+    "name":"abhishekbansal",
+    "password":"RamjiHanumanji@12345",
+    "email":"abcd@gmail.com"
+}
+
+incorrect password
+
+{
+    "username":"a3",
+    "name":"abhishekbansal",
+    "password":"RamjiHanumanji",
+    "email":"abcde@gmail.com"
+}
+
+incorrect email
+
+{
+    "username":"a4",
+    "name":"abhishekbansal",
+    "password":"RamjiHanumanji@1234",
+    "email":"abcdegmail.com"
+}
+
+user already exist
+
+{
+    "username":"a2",
+    "name":"abhishekbansal",
+    "password":"RamjiHanumanji@12345",
+    "email":"abcd@gmail.com"
+}
+
+
+
+
+
+
+
+
+login
+
+user 1 (eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U1MGY1MGMxYjBkODk5OTJhNDJjMzMiLCJpYXQiOjE2NzU5NTYxMzh9.sGNUoAb8Ev_f6QLkrsh7AEpt7kY4RihIBgxE2ykMvTU)
+{
+    "email":"abc@gmail.com",
+    "password":"RamjiHanumanji@1234"   
+}
+
+user2 (eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U1MGY1OWMxYjBkODk5OTJhNDJjMzciLCJpYXQiOjE2NzU5NTYxNTZ9.59m5zwRAcc-X-2dSRgn7KQS7KHbbmDRHiE3dI4CxGUk)
+
+{
+    "email":"abcd@gmail.com",
+    "password":"RamjiHanumanji@12345"   
+}
+
+incorrect password
+
+{
+    "email":"abcd@gmail.com",
+    "password":"RamjiHanumanji@123"   
+}
+
+user do not exist
+
+{
+    "email":"abcdf@gmail.com",
+    "password":"RamjiHanumanji@12345"   
+}
+
+
+
+
+
+
+reset password
+
+user2()
+
+{
+    "email":"abcd@gmail.com",
+    "password":"RamjiHanumanji@12345",
+    "newpassword":"RamjiHanumanji@123456"
+}
+
+user do not exist
+
+{
+    "email":"abcf@gmail.com",
+    "password":"RamjiHanumanji@12345",
+    "newpassword":"RamjiHanumanji@123456"
+}
+
+
+incorrect password
+
+{
+    "email":"abcd@gmail.com",
+    "password":"RamjiHanumanji@123457",
+    "newpassword":"RamjiHanumanji@123456"
+}
+
+
+
+
+create a blog
+
+user1
+
+{
+    "title":"create new user 1 blog1",
+    "description":"new blog description1"
+}
+
+{
+    "title":"create new user1 blog2",
+    "description":"new blog description2"
+}
+
+{
+    "title":"create new user1 blog3",
+    "description":"new blog description3"
+}
+
+
+user2
+
+{
+    "title":"create new  user 2 blog1",
+    "description":"new blog description1"
+}
+
+{
+    "title":"create new  user 2 blog2",
+    "description":"new blog description2"
+}
+
+{
+    "title":"create new  user 2 blog3",
+    "description":"new blog description3"
+}
+
+
+update blog (pass blog id in url as query)
+
+login as user2 (eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2U1MGY1OWMxYjBkODk5OTJhNDJjMzciLCJpYXQiOjE2NzU5NTYxNTZ9.59m5zwRAcc-X-2dSRgn7KQS7KHbbmDRHiE3dI4CxGUk)
+
+{
+        "title":"update user2 blog"
+}
+
+
+delete blog (pass blog id in url as query)
+
+getblog (logged in user)
+
+getallblogs(not neccessary to logged in)
+
+getblogbyid (get blog by blog id and not neccessaru to logged in)
+
+
+
+comment
+
+logged in as user2
+
+create (pass blog id as query parameter in url)
+
+{
+    "comment":"comment1"
+}
+
+{
+    "comment":"comment2"
+}
+
+
+update comment (pass comment id as query parameter in url)
+
+{
+    "comment":"comment is comment"
+}
+
+delete comment (pass comment id as query parameter in url)
+
+getallcomments (user have to logged in to see his all comments to any blogs)
+
+likecomment (logged in user and automattically take comment as like and save it we are don't require to pass text in req.body)
+
+
+
+

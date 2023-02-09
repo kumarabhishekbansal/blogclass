@@ -1,5 +1,8 @@
 const {Comment}=require("./models");
 
+
+//Commentdes is used to create blog after passing blog id by query parameter and comment and it takes user id automattically and we can comment to an blog but for this we must have authenticated
+
 const Commentdes=async(req,res)=>{
     try {
         const {user_id,comment}=req.body;
@@ -24,6 +27,8 @@ const Commentdes=async(req,res)=>{
     }
 }
 
+//usercommentdatas is used to get all the blogs in which he was commented before
+
 const usercommentdatas=async(req,res)=>{
     try {
         const{user_id}=req.body;
@@ -43,6 +48,9 @@ const usercommentdatas=async(req,res)=>{
         console.log("error while getting user all comments to any blogs");
     }
 }
+
+//deleteparticularcomment is used to delete comment and he can delete his own comment not anyother ones else.
+
 
 const deleteparticularcomment=async(req,res)=>{
     try {
@@ -67,6 +75,8 @@ const deleteparticularcomment=async(req,res)=>{
         console.log("error while deleting the comment");
     }
 }
+
+//updateparticularcomment is used to update comment and he can update his own comment not anyother ones else.
 
 const updateparticularcomment=async(req,res)=>{
     try {
@@ -93,6 +103,10 @@ const updateparticularcomment=async(req,res)=>{
         console.log("error while update the comment");
     }
 }
+
+
+//likecomment is used to like comment it works similar as like button in frontend
+
 
 const likecomment=async(req,res)=>{
     try {
